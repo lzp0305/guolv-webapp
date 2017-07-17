@@ -24,56 +24,51 @@
 		<a href="" class="top-more"></a>
 	</div>
 	<!-- 头部 -->
-	<div class="header user-center-header">个人中心</div>
+	<div class="header user-center-header">
+		<a href="" class="header-back"></a>
+		我的资料
+	</div>
 
 	<!-- 信息模块 -->
 	<div class="user-card user-card-info">
 		<div class="user-info">
-			<img src="images/user-avatar.png" alt="">
-			<span class="user-name">江西省环境国际旅行社有限公司</span>
+			<div class="user-avatar-img" id="preview"></div>
+			<input type="file" class="up-load-avatar-input"onchange="preview(this)">
+			<a href="" class="up-load-avatar">上传门店照片</a>
 		</div>
 	</div>
 
-	<!-- 管理模块 -->
+	<!-- 填写信息 -->
 	<ul class="user-card user-card-manage">
-		<li class="user-card-item">
-			<a href="" style="background-image: url(icon/user-info.png);">我的资料</a>
-			<span class="user-card-item-arror"></span>
+		<li class="user-card-item user-info-input">
+			<span>所属旅行社</span>
+			<input type="text">
 		</li>
-		<li class="user-card-item">
-			<a href="" style="background-image: url(icon/user-business.png);">收藏供应商</a>
-			<span class="user-card-item-arror"></span>
+		<li class="user-card-item user-info-input">
+			<span>门店</span>
+			<input type="text">
 		</li>
-		<li class="user-card-item">
-			<a href="" style="background-image: url(icon/user-travle.png);">收藏行程</a>
-			<span class="user-card-item-arror"></span>
+		<li class="user-card-item user-info-input">
+			<span>联系人</span>
+			<input type="text">
 		</li>
-		<li class="user-card-item">
-			<a href="" style="background-image: url(icon/user-message.png);">我的消息</a>
-			<span class="user-card-item-arror"></span>
+		<li class="user-card-item user-info-input">
+			<span>联系电话</span>
+			<input type="number">
+		</li>
+		<li class="user-card-item user-info-input">
+			<span>地址</span>
+			<input type="text">
+		</li>
+		<li class="user-card-item user-info-input">
+			<span>所属区域</span>
+			<input type="text">
 		</li>
 	</ul>
 
-	<!-- 反馈模块 -->
-	<ul class="user-card user-card-feed">
-		<li class="user-card-item user-card-feed-item">
-			<a href="" style="background-image: url(icon/user-contact.png);">联系我们</a>
-			<span class="user-card-item-arror"></span>
-		</li>
-		<li class="user-card-item user-card-feed-item">
-			<a href="" style="background-image: url(icon/user-feed.png);">意见反馈</a>
-			<span class="user-card-item-arror"></span>
-		</li>
-		<li class="user-card-item user-card-feed-item">
-			<a href="" style="background-image: url(icon/user-changepw.png);">修改密码</a>
-			<span class="user-card-item-arror"></span>
-		</li>
-	</ul>
-	
-
-	<!-- 退出当前账号 -->
+	<!-- 保存 -->
 	<a href="" class="logout">
-		退出当前账号
+		保存
 	</a>
 
 	

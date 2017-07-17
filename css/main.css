@@ -10,10 +10,13 @@ body { overflow-x: hidden; }
 .search-input { -webkit-appearance: none; width: 70%; border-radius: 0 0.48rem 0.48rem 0; height: 0.96rem; border: 0; margin-top: 0.224rem; font-size: 0.384rem; line-height: 0.96rem; color: #999999; float: left; }
 .search-submit { width: 10%; height: 0.96rem; margin-left: 0.32rem; margin-top: 0.224rem; border: 0; border-radius: 0.48rem 0 0 0.48rem; background: #fff url(../icon/search-icon.png) 0.384rem center no-repeat; background-size: 0.416rem; float: left; }
 .user-center { display: block; width: 16%; height: 100%; background: url(../icon/user-center.png) center no-repeat; background-size: 0.656rem 0.72rem; float: right; }
-.user-center-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; }
+.user-center-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; position: relative; }
 .header-little-title { width: 26%; height: 1.408rem; font-size: 0.544rem; line-height: 1.408rem; text-align: center; color: #fff; float: left; }
 .ny-search-submit { margin-left: 0; }
 .ny-search-input { width: 60%; }
+.header-back { display: block; position: absolute; left: 0; top: 0; width: 1.248rem; height: 1.408rem; background-image: url(../icon/back.png); background-position: center; background-repeat: no-repeat; background-size: 0.288rem 0.512rem; }
+
+
 /*首页轮播图*/
 .index-swiper { width: 100%; height: 5.6rem; }
 .index-slide { width: 100%; height: 5.6rem; }
@@ -22,9 +25,9 @@ body { overflow-x: hidden; }
 /*首页卡片*/
 .card-box { width: 100%; margin: 0.32rem 0 0 2.6%; }
 .card { display: block; border-radius: 0.08rem; float: left; margin: 0 2.6% 0.32rem 0; font-size: 0.576rem; text-align: center; color: #fff; }
-.card-single { width: 46%; height: 3.248rem; background-size: auto 3.248rem; line-height: 3.248rem; }
-.card-double { width: 46%; height: 6.816rem; background-size: auto 6.816rem; line-height: 6.816rem; }
-.card-triple { width: 94.6%; height: 4.8rem; background-size: auto 4.8rem; line-height: 4.8rem; }
+.card-single { width: 46%; height: 3.248rem; background-repeat: no-repeat; background-position: center; background-size: auto 3.248rem; line-height: 3.248rem; }
+.card-double { width: 46%; height: 6.816rem; background-repeat: no-repeat; background-position: center; background-size: auto 6.816rem; line-height: 6.816rem; }
+.card-triple { width: 94.6%; height: 4.8rem; background-repeat: no-repeat; background-position: center; background-size: auto 4.8rem; line-height: 4.8rem; }
 
 /*border 最小值为0.02rem 不然没有显示*/
 
@@ -36,19 +39,44 @@ body { overflow-x: hidden; }
 
 
 /*列表*/
-.business-box, .travle-box { width: 95%; margin: 0.416rem 2.5% 0; }
-.business-list, .travle-list { padding-bottom: 0.32rem; border-bottom: 0.02rem solid #ddd; }
+.business-box, .travle-box { width: 95%; margin: 0 2.5%; }
+.business-list, .travle-list { padding: 0.32rem 0; border-bottom: 0.02rem solid #ddd; }
 .business-list:last-child, .travle-list:last-child { border-bottom: 0; }
-.business-list a { display: block; height: 2.56rem; padding-left: 4.32rem; margin-top: 0.32rem; position: relative; font-size: 0; color: #333; }
-.travle-list a { display: block; height: 2.56rem; padding-left: 4.32rem; margin-top: 0.32rem; position: relative; font-size: 0; color: #333; }
+.business-list a { display: block; height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; }
+.travle-list a { display: block; height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; }
 .business-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
 .travle-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
 .business-list-title, .travle-list-title { font-size: 0.544rem; line-height: 0.6rem; max-height: 1.2rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.business-list-route, .travle-company { position: absolute; bottom: 0; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.business-list-route, .travle-company, .business-tel { position: absolute; bottom: 0; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .travle-price { position: absolute; bottom: 0.65rem; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .travle-price-number { color: #ff7100; }
 
 /*用户中心*/
+.user-card { width: 100%; margin-bottom: 0.32rem; background: #fff; }
+.user-card-info { padding: 0.48rem 3% 0.48rem 2.5%; }
+.user-info { height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; padding-top: 0.352rem; font-size: 0.544rem; line-height: 0.928rem; }
+.user-info img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
+.user-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.up-load-avatar { display: block; font-size: 0.384rem; line-height: 2.56rem; color: #999; margin-top: -0.352rem; background-image: url(../icon/user-item-arror.png); background-repeat: no-repeat; background-position: right 0 center; background-size: 0.416rem 0.528rem; }
+.up-load-avatar-input { position: absolute; top: 0; right: 0; width: 100%; height: 2.56rem; opacity: 0; }
+
+
+.message-number { min-width: 0.384rem; height: 0.384rem; display: block; position: absolute; top: 0.192rem; left: 2.608rem; border-radius: 0.192rem; background: #f00; color: #fff; font-size: 0.32rem; line-height: 0.384rem; text-align: center; }
+.user-card-manage, .user-card-feed { padding: 0 0.32rem; }
+.user-card-item { height: 1.376rem; border-bottom: 1px solid #f2f2f2; position: relative; }
+.user-card-item a { display: block; padding-left: 0.864rem; font-size: 0.448rem; line-height: 1.376rem; color: #333333; background-size: 0.576rem 0.528rem; background-position: 0 center; background-repeat: no-repeat; }
+.user-card-item-arror { position: absolute; right: 0; top: 0.432rem; width: 0.416rem; height: 0.528rem; display: block; background-image: url(../icon/user-item-arror.png); background-repeat: no-repeat; background-size: 0.416rem 0.528rem; }
+.user-card-feed-item a { background-size: 0.576rem 0.592rem; background-position: 0 0.352rem; }
+
+.user-info-input span { width: 2.656rem; height: 1.376rem; display: block; float: left; line-height: 1.376rem; text-align: left; color: #999999; font-size: 0.448rem; }
+.user-info-input input { width: 8.7rem; height: 1.34rem; display: block; border: 0; outline: 0; float: right; }
+
+/*退出当前账号*/
+.logout { display: block; width: 92%; height: 1.408rem; background: #41dd7c; color: #fff; text-align: center; font-size: 0.576rem; line-height: 1.408rem; border-radius: 0.16rem; margin: 0.64rem 4% 0.432rem; }
+
+
+
+
 
 
 
@@ -66,6 +94,30 @@ body { overflow-x: hidden; }
 .travle-on { background: url(../icon/travle-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
 .user { background: url(../icon/user.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
 .user-on { background: url(../icon/user-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
+
+
+
+/*详情页*/
+.common-card { width: 100%; padding-left: 0.32rem; padding-right: 0.32rem; margin-bottom: 0.32rem; background: #fff; }
+
+.detail-back { position: fixed; left: 0.32rem; top: 0.224rem; z-index: 1000; width: 0.96rem; height: 0.96rem; background: #000 url(../icon/back.png) 0.304rem 0.224rem no-repeat; background-size: 0.288rem 0.512rem; border-radius: 0.48rem; opacity: 0.4; }
+
+.detail-swiper { width: 100%; height: 7.68rem; }
+.detail-slide { width: 100%; height: 100%; }
+.detail-slide a { display: block; width: 100%; height: 100%; background-size: auto 7.68rem; }
+
+.detail-title { font-size: 0.544rem; line-height: 0.928rem; padding-top: 0.272rem; color: #333333; padding-bottom: 0.272rem; border-bottom: 1px solid #f2f2f2; }
+
+.detail-tag-item { border: 1px solid #ff7100; border-radius: 0.08rem; color: #ff7100; line-height: 0.512rem; font-size: 0.384rem; padding: 0 0.288rem; }
+.detail-tag-item:first-child { margin-left: 0.64rem; }
+
+.detail-price { margin-top: 0.256rem; padding-bottom: 0.24rem; }
+.detail-price li { height: 0.96rem; font-size: 0; }
+.detail-price-name { display: inline-block; width: 3.12rem; height: 0.96rem; font-size: 0.448rem; color: #666666; line-height: 0.96rem; }
+.detail-price-number { display: inline-block; height: 0.96rem; font-size: 0.544rem; color: #ff7100; line-height: 0.96rem; }
+
+.detail-little-title { width: 100%; height: 1.488rem; font-size: 0.544rem; line-height: 1.488rem; color: #333; border-bottom: 1px solid #f2f2f2; }
+.detail-little-maintext { font-size: 0.448rem; line-height: 0.784rem; padding-top: 0.208rem; padding-bottom: 0.416rem; color: #666666; text-align: justify; }
 
 
 
