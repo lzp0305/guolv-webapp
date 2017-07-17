@@ -1,0 +1,74 @@
+body { overflow-x: hidden; }
+/*顶部按钮及标题*/
+.top-bar { width: 100%; height: 1.8rem; background: #323137; display: none; }
+.top-return { display: block; width: 20%; height: 100%; background: url(../icon/top-return-bg.png) 0.4rem center no-repeat; background-size: 0.72rem; text-indent: 1.04rem; font-size: 0.6rem; line-height: 1.8rem; color: #fff; float: left;}
+.top-title { width: 60%; height: 100%; font-size: 0.6rem; line-height: 1.8rem; text-align: center; color: #fff; float: left; }
+.top-more { display: block; width: 20%; height: 100%; background: url(../icon/top-more-bg.png) center no-repeat; background-size: 0.72rem; float: left; }
+
+/*头部*/
+.header { width: 100%; height: 1.408rem; background: #41dd7c; }
+.search-input { -webkit-appearance: none; width: 70%; border-radius: 0 0.48rem 0.48rem 0; height: 0.96rem; border: 0; margin-top: 0.224rem; font-size: 0.384rem; line-height: 0.96rem; color: #999999; float: left; }
+.search-submit { width: 10%; height: 0.96rem; margin-left: 0.32rem; margin-top: 0.224rem; border: 0; border-radius: 0.48rem 0 0 0.48rem; background: #fff url(../icon/search-icon.png) 0.384rem center no-repeat; background-size: 0.416rem; float: left; }
+.user-center { display: block; width: 16%; height: 100%; background: url(../icon/user-center.png) center no-repeat; background-size: 0.656rem 0.72rem; float: right; }
+.user-center-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; }
+.header-little-title { width: 26%; height: 1.408rem; font-size: 0.544rem; line-height: 1.408rem; text-align: center; color: #fff; float: left; }
+.ny-search-submit { margin-left: 0; }
+.ny-search-input { width: 60%; }
+/*首页轮播图*/
+.index-swiper { width: 100%; height: 5.6rem; }
+.index-slide { width: 100%; height: 5.6rem; }
+.index-slide a { display: block; width: 100%; height: 5.6rem; background-position: center; background-repeat: no-repeat; background-size: auto 5.6rem; }
+
+/*首页卡片*/
+.card-box { width: 100%; margin: 0.32rem 0 0 2.6%; }
+.card { display: block; border-radius: 0.08rem; float: left; margin: 0 2.6% 0.32rem 0; font-size: 0.576rem; text-align: center; color: #fff; }
+.card-single { width: 46%; height: 3.248rem; background-size: auto 3.248rem; line-height: 3.248rem; }
+.card-double { width: 46%; height: 6.816rem; background-size: auto 6.816rem; line-height: 6.816rem; }
+.card-triple { width: 94.6%; height: 4.8rem; background-size: auto 4.8rem; line-height: 4.8rem; }
+
+/*border 最小值为0.02rem 不然没有显示*/
+
+/*选项卡*/
+.tab-box { width: 100%; border-bottom: 0.02rem solid #ddd }
+.tab-item { height: 1.328rem; }
+.tab-item-on { border-bottom: 0.064rem solid #41dd7c; }
+.tab-item a { display: block; text-align: center; line-height: 1.328rem; font-size: 0.448rem; color: #333; }
+
+
+/*列表*/
+.business-box, .travle-box { width: 95%; margin: 0.416rem 2.5% 0; }
+.business-list, .travle-list { padding-bottom: 0.32rem; border-bottom: 0.02rem solid #ddd; }
+.business-list:last-child, .travle-list:last-child { border-bottom: 0; }
+.business-list a { display: block; height: 2.56rem; padding-left: 4.32rem; margin-top: 0.32rem; position: relative; font-size: 0; color: #333; }
+.travle-list a { display: block; height: 2.56rem; padding-left: 4.32rem; margin-top: 0.32rem; position: relative; font-size: 0; color: #333; }
+.business-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
+.travle-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
+.business-list-title, .travle-list-title { font-size: 0.544rem; line-height: 0.6rem; max-height: 1.2rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.business-list-route, .travle-company { position: absolute; bottom: 0; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.travle-price { position: absolute; bottom: 0.65rem; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.travle-price-number { color: #ff7100; }
+
+/*用户中心*/
+
+
+
+/*尾部冲抵*/
+.behind-footer { width: 100%; height: 1.584rem; }
+
+/*尾部*/
+.footer { width: 100%; height: 1.568rem; position: fixed; bottom: 0; border-top: 0.02rem solid #ddd; background: #fff; z-index: 1000; }
+.home, .business, .travle, .user { display: block; width: 25%; height: 0.624rem; float: left; padding-top: 0.944rem; font-size: 0.352rem; line-height: 0.624rem; text-align: center; color: #666; }
+.home { background: url(../icon/home.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
+.home-on { background: url(../icon/home-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
+.business { background: url(../icon/business.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
+.business-on { background: url(../icon/business-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
+.travle { background: url(../icon/travle.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
+.travle-on { background: url(../icon/travle-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
+.user { background: url(../icon/user.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
+.user-on { background: url(../icon/user-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
+
+
+
+
+
+/*结束*/

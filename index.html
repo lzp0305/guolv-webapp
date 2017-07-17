@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>国旅</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+	<!-- 顶部按钮及标题 -->
+	<div class="top-bar">
+		<a href="" class="top-return">返回</a>
+		<div class="top-title">国旅</div>
+		<a href="" class="top-more"></a>
+	</div>
+	<!-- 头部 -->
+	<div class="header">
+		<!-- 以下写法可以将键盘右下角键变成搜索键 -->
+		<form action="#">
+			<input type="submit" class="search-submit" value=""/>
+			<input type="search" class="search-input" placeholder="搜索行程/供应商"/>
+		</form>
+		<a href="" class="user-center"></a>
+	</div>
+
+	<!-- 轮播图 -->
+	<div class="swiper-container index-swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide index-slide">
+				<a href="" style="background-image: url(images/index-swiper-pic1.png);">
+				</a>
+			</div>
+			<div class="swiper-slide index-slide">
+				<a href="" style="background-image: url(images/index-swiper-pic1.png);">
+				</a>
+			</div>
+			<div class="swiper-slide index-slide">
+				<a href="" style="background-image: url(images/index-swiper-pic1.png);">
+				</a>
+			</div>
+		</div>
+		<!-- 轮播图指示器 -->
+		<div class="swiper-pagination index-pagination"></div>
+	</div>
+
+	<!-- 首页卡片 -->
+	<div class="card-box">
+		<!-- 小块用 card-single 这个类，中等用 card-double 这个类，最大块用 card-triple 这个类，如果左边2小右边1中，需要在中的行内写以下样式，float: right; margin: 0 5.3% 0.4rem 0; -->
+		<a href="" class="card card-double" style="background-image: url(images/card-double-pic1.png);">热门路线</a>
+		<a href="" class="card card-single" style="background-image: url(images/card-single-pic2.png);">出境游</a>
+		<a href="" class="card card-single" style="background-image: url(images/card-single-pic1.png);">国内游</a>
+		<a href="" class="card card-triple" style="background-image: url(images/card-triple-pic1.png);">省内游</a>
+		<div class="clear"></div>
+	</div>
+	
+
+
+	<!-- 冲抵尾部的空白容器 -->
+	<div class="behind-footer"></div>
+	<!-- 尾部 -->
+	<div class="footer">
+		<a href="" class="home home-on">首页</a>
+		<a href="" class="business">找供应商</a>
+		<a href="" class="travle">找行程</a>
+		<a href="" class="user">我的</a>
+	</div>
+
+
+
+
+
+
+	
+	<!-- 轮播图 js -->
+	<script src="js/swiper.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
