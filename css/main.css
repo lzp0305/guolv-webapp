@@ -50,6 +50,7 @@ body { overflow-x: hidden; }
 .business-list-route, .travle-company, .business-tel { position: absolute; bottom: 0; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .travle-price { position: absolute; bottom: 0.65rem; display: block; height: 0.448rem; font-size: 0.448rem; line-height: 0.5rem; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .travle-price-number { color: #ff7100; }
+.business-man { bottom: 0.8rem; }
 
 /*用户中心*/
 .user-card { width: 100%; margin-bottom: 0.32rem; background: #fff; }
