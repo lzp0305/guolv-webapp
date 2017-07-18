@@ -119,8 +119,43 @@ body { overflow-x: hidden; }
 .detail-little-title { width: 100%; height: 1.488rem; font-size: 0.544rem; line-height: 1.488rem; color: #333; border-bottom: 1px solid #f2f2f2; }
 .detail-little-maintext { font-size: 0.448rem; line-height: 0.784rem; padding-top: 0.208rem; padding-bottom: 0.416rem; color: #666666; text-align: justify; }
 
+.travle-date { margin-top: 0.48rem; padding-bottom: 0.48rem; }
+.travle-date li { width: 2.112rem; height: 1.408rem; border: 0.032rem solid #ccc; border-radius: 0.128rem; margin-right: 0.48rem; float: left; }
+.day { display: block; width: 100%; text-align: center; font-size: 0.576rem; line-height: 0.448rem; margin: 0.24rem auto 0; color: #41dd7c; }
+.year-month { display: block; width: 100%; text-align: center; font-size: 0.384rem; line-height: 0.336rem; margin: 0.208rem auto 0; color: #666666; }
 
+.tab-item-a-on { color: #41dd7c!important; }
 
+.tab-little-title { width: 100%; text-align: center; font-size: 0; padding: 0.48rem 0 0.592rem; }
+.tab-little-title-line { display: inline-block; background: url(../icon/tab-little-title-line.png) repeat-x; background-size: 0.72rem 0.64rem !important; }
+.tab-little-title-text { display: inline-block; font-size: 0.64rem; color: #333; line-height: 0.64rem; padding: 0 0.32rem; margin: 0 0.72rem; background: #fff; }
+
+.impor-text { line-height: 0.768rem; color: #41dd7c; font-size: 0.448rem; }
+.impor-title { font-size: 0.544rem; line-height: 0.768rem; }
+#xcts-card, #jtxc-card, #fysm-card, #zysx-card { position: relative; }
+.card-anchor-point { position: absolute; top: -1.328rem; }
+.xcts-list { margin-top: 0.528rem; padding-bottom: 0.576rem; }
+.xcts-list li { padding-left: 0.464rem; line-height: 0.768rem; background: url(../icon/xcts-list-icon.png) 0 0.24rem no-repeat; background-size: 0.256rem; }
+
+.jtxc-list { padding-bottom: 0.576rem; }
+.jtxc-list li { background: url(../icon/jtxc-left-bg.png) 0 0 repeat-y; background-size: 1.216rem auto; margin-bottom: 0.288rem; }
+.jtxc-list-left { width: 1.216rem; float: left; }
+.jtxc-day-number { display: block; font-size: 0.96rem; color: #41dd7c; font-weight: 100; background: #fff; }
+
+.jtxc-list-right { width: 9.792rem; float: right; }
+.jtxc-route { display: block; font-size: 0.544rem; color: #333; margin-top: 0.36rem; }
+.meal { font-size: 0.448rem; line-height: 0.768rem; color: #666; margin-right: 0.96rem; }
+.sleep { font-size: 0.448rem; line-height: 0.768rem; color: #666; margin-right: 0.96rem; }
+.jtxc-detail-text { display: block; font-size: 0.448rem; line-height: 0.768rem; color: #666; }
+.fysm-main-text, .zysx-main-text { font-size: 0.448rem; line-height: 0.768rem; color: #666; padding-bottom: 0.448rem; }
+
+.detail-footer { padding-left: 0.32rem; padding-right: 0.32rem; font-size: 0; }
+.collection, .forward-price, .forward-noprice, .find-error { display: block; float: left; margin-top: 0.128rem; width: 2.72rem; height: 1.28rem; font-size: 0.384rem; line-height: 1.28rem; border-radius: 0.096rem; color: #fff; }
+.collection, .forward-price, .forward-noprice { margin-right: 0.16rem; }
+.collection { background: #41dd7c url(../icon/collection.png) 0.544rem 0.416rem no-repeat; background-size: 0.416rem 0.4rem; text-indent: 1.168rem; }
+.forward-price { background: #ff7100 url(../icon/forward.png) 0.096rem 0.4rem no-repeat; background-size: 0.4rem 0.416rem; text-indent: 0.544rem; }
+.forward-noprice { background: #49a6c5 url(../icon/forward.png) 0.096rem 0.4rem no-repeat; background-size: 0.4rem 0.416rem; text-indent: 0.544rem; }
+.find-error { background: #13b5b1 url(../icon/find-error.png) 0.496rem 0.352rem no-repeat; background-size: 0.432rem 0.528rem; text-indent: 1.168rem; }
 
 
 /*结束*/
