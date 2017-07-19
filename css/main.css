@@ -10,7 +10,10 @@ body { overflow-x: hidden; }
 .search-input { -webkit-appearance: none; width: 70%; border-radius: 0 0.48rem 0.48rem 0; height: 0.96rem; border: 0; margin-top: 0.224rem; font-size: 0.384rem; line-height: 0.96rem; color: #999999; float: left; }
 .search-submit { width: 10%; height: 0.96rem; margin-left: 0.32rem; margin-top: 0.224rem; border: 0; border-radius: 0.48rem 0 0 0.48rem; background: #fff url(../icon/search-icon.png) 0.384rem center no-repeat; background-size: 0.416rem; float: left; }
 .user-center { display: block; width: 16%; height: 100%; background: url(../icon/user-center.png) center no-repeat; background-size: 0.656rem 0.72rem; float: right; }
-.user-center-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; position: relative; }
+.user-center-header, .usual-business-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; position: relative; }
+.usual-business-header { position: fixed; top: 0; z-index: 1000; }
+.edit, .cancel { position: absolute; right: 0; top: 0; width: 1.584rem; height: 100%; text-align: center; font-size: 0.48rem; line-height: 1.408rem; color: #fff; }
+
 .header-little-title { width: 26%; height: 1.408rem; font-size: 0.544rem; line-height: 1.408rem; text-align: center; color: #fff; float: left; }
 .ny-search-submit { margin-left: 0; }
 .ny-search-input { width: 60%; }
@@ -20,29 +23,32 @@ body { overflow-x: hidden; }
 /*首页轮播图*/
 .index-swiper { width: 100%; height: 5.6rem; }
 .index-slide { width: 100%; height: 5.6rem; }
-.index-slide a { display: block; width: 100%; height: 5.6rem; background-position: center; background-repeat: no-repeat; background-size: auto 5.6rem; }
+.index-slide a { display: block; width: 100%; height: 5.6rem; background-position: center; background-repeat: no-repeat; background-size: 100% auto; }
 
 /*首页卡片*/
 .card-box { width: 100%; margin: 0.32rem 0 0 2.6%; }
 .card { display: block; border-radius: 0.08rem; float: left; margin: 0 2.6% 0.32rem 0; font-size: 0.576rem; text-align: center; color: #fff; }
-.card-single { width: 46%; height: 3.248rem; background-repeat: no-repeat; background-position: center; background-size: auto 3.248rem; line-height: 3.248rem; }
-.card-double { width: 46%; height: 6.816rem; background-repeat: no-repeat; background-position: center; background-size: auto 6.816rem; line-height: 6.816rem; }
-.card-triple { width: 94.6%; height: 4.8rem; background-repeat: no-repeat; background-position: center; background-size: auto 4.8rem; line-height: 4.8rem; }
+.card-single { width: 46%; height: 3.248rem; background-repeat: no-repeat; background-position: center; background-size: 100% auto; line-height: 3.248rem; }
+.card-double { width: 46%; height: 6.816rem; background-repeat: no-repeat; background-position: center; background-size: 100% auto; line-height: 6.816rem; }
+.card-triple { width: 94.6%; height: 4.8rem; background-repeat: no-repeat; background-position: center; background-size: 100% auto; line-height: 4.8rem; }
 
 /*border 最小值为0.02rem 不然没有显示*/
 
 /*选项卡*/
 .tab-box { width: 100%; border-bottom: 0.02rem solid #ddd }
-.tab-item { height: 1.328rem; }
+.tab-item, .tab-item2 { height: 1.328rem; }
 .tab-item-on { border-bottom: 0.064rem solid #41dd7c; }
 .tab-item a { display: block; text-align: center; line-height: 1.328rem; font-size: 0.448rem; color: #333; }
-
+.tab-item2 a { display: block; text-align: center; line-height: 1.328rem; font-size: 0.448rem; color: #333; }
 
 /*列表*/
+.usual-business-list { margin-top: 1.408rem!important; }
 .business-box, .travle-box { width: 95%; margin: 0 2.5%; }
-.business-list, .travle-list { padding: 0.32rem 0; border-bottom: 0.02rem solid #ddd; }
+.business-list, .travle-list { padding: 0.32rem 0 0.32rem 0; border-bottom: 0.02rem solid #ddd; transition: all 0.3s; position: relative; }
+.edit-business-list { background: url(../icon/edit-bg.png) 0 center no-repeat; background-size: 0.672rem; }
 .business-list:last-child, .travle-list:last-child { border-bottom: 0; }
 .business-list a { display: block; height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; }
+.cover-list { display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 999; background-repeat: no-repeat; background-position: 0 center; background-size: 0.672rem; }
 .travle-list a { display: block; height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; }
 .business-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
 .travle-list img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
@@ -70,10 +76,10 @@ body { overflow-x: hidden; }
 .user-card-feed-item a { background-size: 0.576rem 0.592rem; background-position: 0 0.352rem; }
 
 .user-info-input span { width: 2.656rem; height: 1.376rem; display: block; float: left; line-height: 1.376rem; text-align: left; color: #999999; font-size: 0.448rem; }
-.user-info-input input { width: 8.7rem; height: 1.34rem; display: block; border: 0; outline: 0; float: right; }
+.user-info-input input { width: 76%; height: 1.34rem; display: block; font-size: 0.448rem; line-height: 1.34rem; color: #999; border: 0; outline: 0; float: right; }
 
 /*退出当前账号*/
-.logout { display: block; width: 92%; height: 1.408rem; background: #41dd7c; color: #fff; text-align: center; font-size: 0.576rem; line-height: 1.408rem; border-radius: 0.16rem; margin: 0.64rem 4% 0.432rem; }
+.logout { display: block; width: 92%; height: 1.408rem; background: #41dd7c; color: #fff; text-align: center; font-size: 0.576rem; line-height: 1.408rem; border-radius: 0.16rem; margin: 0.64rem 4% 0.432rem; border: 0; }
 
 
 
@@ -86,6 +92,7 @@ body { overflow-x: hidden; }
 
 /*尾部*/
 .footer { width: 100%; height: 1.568rem; position: fixed; bottom: 0; border-top: 0.02rem solid #ddd; background: #fff; z-index: 1000; }
+.delete-item { text-align: center; font-size: 0.576rem; line-height: 1.568rem; color: #fff; background: #41dd7c; }
 .home, .business, .travle, .user { display: block; width: 25%; height: 0.624rem; float: left; padding-top: 0.944rem; font-size: 0.352rem; line-height: 0.624rem; text-align: center; color: #666; }
 .home { background: url(../icon/home.png) center 0.144rem no-repeat; background-size: auto 0.72rem; }
 .home-on { background: url(../icon/home-on.png) center 0.144rem no-repeat; background-size: auto 0.72rem; color: #41dd7c; }
@@ -105,7 +112,7 @@ body { overflow-x: hidden; }
 
 .detail-swiper { width: 100%; height: 7.68rem; }
 .detail-slide { width: 100%; height: 100%; }
-.detail-slide a { display: block; width: 100%; height: 100%; background-size: auto 7.68rem; }
+.detail-slide a { display: block; width: 100%; height: 100%; background-size: 100% auto; }
 
 .detail-title { font-size: 0.544rem; line-height: 0.928rem; padding-top: 0.272rem; color: #333333; padding-bottom: 0.272rem; border-bottom: 1px solid #f2f2f2; }
 
@@ -136,14 +143,14 @@ body { overflow-x: hidden; }
 #xcts-card, #jtxc-card, #fysm-card, #zysx-card { position: relative; }
 .card-anchor-point { position: absolute; top: -1.328rem; }
 .xcts-list { margin-top: 0.528rem; padding-bottom: 0.576rem; }
-.xcts-list li { padding-left: 0.464rem; line-height: 0.768rem; background: url(../icon/xcts-list-icon.png) 0 0.24rem no-repeat; background-size: 0.256rem; }
+.xcts-list li { padding-left: 0.464rem; line-height: 0.768rem; background: url(../icon/xcts-list-icon.png) 0 0.24rem no-repeat; background-size: 0.256rem; font-size: 0.448rem; }
 
 .jtxc-list { padding-bottom: 0.576rem; }
 .jtxc-list li { background: url(../icon/jtxc-left-bg.png) 0 0 repeat-y; background-size: 1.216rem auto; margin-bottom: 0.288rem; }
 .jtxc-list-left { width: 1.216rem; float: left; }
 .jtxc-day-number { display: block; font-size: 0.96rem; color: #41dd7c; font-weight: 100; background: #fff; }
 
-.jtxc-list-right { width: 9.792rem; float: right; }
+.jtxc-list-right { width: 89%; float: right; }
 .jtxc-route { display: block; font-size: 0.544rem; color: #333; margin-top: 0.36rem; }
 .meal { font-size: 0.448rem; line-height: 0.768rem; color: #666; margin-right: 0.96rem; }
 .sleep { font-size: 0.448rem; line-height: 0.768rem; color: #666; margin-right: 0.96rem; }
@@ -158,5 +165,34 @@ body { overflow-x: hidden; }
 .forward-noprice { background: #49a6c5 url(../icon/forward.png) 0.096rem 0.4rem no-repeat; background-size: 0.4rem 0.416rem; text-indent: 0.544rem; }
 .find-error { background: #13b5b1 url(../icon/find-error.png) 0.496rem 0.352rem no-repeat; background-size: 0.432rem 0.528rem; text-indent: 1.168rem; }
 
+.login-card { padding-top: 1.168rem; padding-bottom: 0.656rem; }
+.signin-card { padding-top: 0.88rem; padding-bottom: 1.024rem; }
+.user-name, .pass-word { display: block; width: 80%; text-indent: 2rem; color: #b2b2b2; font-size: 0.384rem; line-height: 1.408rem; margin: 0.672rem auto; height: 1.408rem; border-radius: 0.696rem; border: 0; outline: 0; }
+.pass-word::-webkit-input-placeholder { color: #b2b2b2; }
+.pass-word:-moz-placeholder { color: #b2b2b2; }
+.pass-word:-ms-input-placeholder { color: #b2b2b2; }
+.user-name::-webkit-input-placeholder { color: #b2b2b2; }
+.user-name:-moz-placeholder { color: #b2b2b2; }
+.user-name:-ms-input-placeholder { color: #b2b2b2; }
+.i4::-webkit-input-placeholder { color: #b2b2b2; }
+.i4:-moz-placeholder { color: #b2b2b2; }
+.i4:-ms-input-placeholder { color: #b2b2b2; }
+.user-name { margin: 0 auto; background: #f5f5f5 url(../icon/user-name.png) 0.832rem 0.4rem no-repeat; background-size: 0.512rem 0.608rem; }
+.pass-word { margin: 0.672rem auto 0; background: #f5f5f5 url(../icon/pass-word.png) 0.88rem 0.416rem no-repeat; background-size: 0.448rem 0.592rem; }
+.ctrl-text { width: 80%; height: 0.384rem; margin: 0.96rem auto 0; padding: 0 0.912rem; }
+.forget-password, .change-password, .signin { font-size: 0.384rem; line-height: 0.384rem; }
+.forget-password, .change-password { float: left; }
+.forget-password { color: #41dd7c; }
+.change-password { color: #333; }
+.signin { float: right; color: #41dd7c; }
+.checkbox { display: inline-block; width: 0.384rem; height: 0.384rem; background: url(../icon/check-bg.png) center no-repeat; border: 0; outline: 0; background-size: 0.384rem; }
+.login-button { padding: 0; width: 100%; height: 1.568rem; text-align: center; background-color: #41dd7c; color: #fff; font-size: 0.576rem; line-height: 1.568rem; border: 0; outline: 0; border-radius: 0.776rem; }
+.login-button:hover { color: #fff; }
+.opt { position: relative; width: 62%; height: 1.568rem; margin: 2.08rem auto 0; }
+.opt-form { position: absolute; top: -0.736rem; }
+.opt-signin { width: 62%; height: 1.568rem; margin: 1.44rem auto 0; }
+.shop-name, .contact-tel, .boss-name, .shop-add, .setting-id, .pw1, .pw2 { display: block; background: #f5f5f5; width: 80%; text-indent: 0.768rem; color: #b2b2b2; font-size: 0.384rem; line-height: 1.408rem; margin: 0.48rem auto 0; height: 1.408rem; border-radius: 0.696rem; border: 0; outline: 0;  }
+.shop-name { margin: 0 auto !important; }
+.pw-error { position: absolute; top: 0.4rem; width: 100%; font-size: 0.384rem; margin: 0 auto; text-align: center; color: #f00; }
 
 /*结束*/
