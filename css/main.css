@@ -1,4 +1,5 @@
 body { overflow-x: hidden; }
+input { -webkit-appearance: none; }
 /*顶部按钮及标题*/
 .top-bar { width: 100%; height: 1.8rem; background: #323137; display: none; }
 .top-return { display: block; width: 20%; height: 100%; background: url(../icon/top-return-bg.png) 0.4rem center no-repeat; background-size: 0.72rem; text-indent: 1.04rem; font-size: 0.6rem; line-height: 1.8rem; color: #fff; float: left;}
@@ -11,7 +12,9 @@ body { overflow-x: hidden; }
 .search-submit { width: 10%; height: 0.96rem; margin-left: 0.32rem; margin-top: 0.224rem; border: 0; border-radius: 0.48rem 0 0 0.48rem; background: #fff url(../icon/search-icon.png) 0.384rem center no-repeat; background-size: 0.416rem; float: left; }
 .user-center { display: block; width: 16%; height: 100%; background: url(../icon/user-center.png) center no-repeat; background-size: 0.656rem 0.72rem; float: right; }
 .user-center-header, .usual-business-header { text-align: center; font-size: 0.544rem; color: #fff; line-height: 1.408rem; position: relative; }
+.list-header { text-align: center; font-size: 0.544rem; color: #fff; height: 4.8rem; background-repeat: no-repeat; background-position: center; background-size: 100% 4.8rem; line-height: 1.408rem; position: relative; background-color: #fff; }
 .usual-business-header { position: fixed; top: 0; z-index: 1000; }
+.contact-banner { width: 100%; height: 5.6rem; background-repeat: no-repeat; background-size: 100% 5.6rem; background-position: center; }
 .edit, .cancel { position: absolute; right: 0; top: 0; width: 1.584rem; height: 100%; text-align: center; font-size: 0.48rem; line-height: 1.408rem; color: #fff; }
 
 .header-little-title { width: 26%; height: 1.408rem; font-size: 0.544rem; line-height: 1.408rem; text-align: center; color: #fff; float: left; }
@@ -61,20 +64,27 @@ body { overflow-x: hidden; }
 /*用户中心*/
 .user-card { width: 100%; margin-bottom: 0.32rem; background: #fff; }
 .user-card-info { padding: 0.48rem 3% 0.48rem 2.5%; }
-.user-info { height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; padding-top: 0.352rem; font-size: 0.544rem; line-height: 0.928rem; }
+.user-info, .feed-back-info { height: 2.56rem; padding-left: 4.32rem; position: relative; font-size: 0; color: #333; padding-top: 0.352rem; font-size: 0.544rem; line-height: 0.928rem; }
 .user-info img { width: 4rem; height: 2.56rem; position: absolute; left: 0; top: 0; }
-.user-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.up-load-avatar { display: block; font-size: 0.384rem; line-height: 2.56rem; color: #999; margin-top: -0.352rem; background-image: url(../icon/user-item-arror.png); background-repeat: no-repeat; background-position: right 0 center; background-size: 0.416rem 0.528rem; }
+.feed-back-info img { width: 2.24rem; height: 2.24rem; position: absolute; left: 0; top: 0.16rem; }
+.user-center-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.up-load-avatar, .up-load-feed-back { display: block; font-size: 0.384rem; line-height: 2.56rem; color: #999; margin-top: -0.352rem; background-image: url(../icon/user-item-arror.png); background-repeat: no-repeat; background-position: right 0 center; background-size: 0.416rem 0.528rem; }
 .up-load-avatar-input { position: absolute; top: 0; right: 0; width: 100%; height: 2.56rem; opacity: 0; }
 
 
 .message-number { min-width: 0.384rem; height: 0.384rem; display: block; position: absolute; top: 0.192rem; left: 2.608rem; border-radius: 0.192rem; background: #f00; color: #fff; font-size: 0.32rem; line-height: 0.384rem; text-align: center; }
 .user-card-manage, .user-card-feed { padding: 0 0.32rem; }
+.user-card-manage-title { width: 100%; height: 1.44rem; font-size: 0.448rem; color: #999; line-height: 1.44rem; border-bottom: 1px solid #e9e9e9; margin-bottom: 0.448rem; }
+.message-date, .message-time { float: right; }
+.message-time { margin-left: 0.64rem; }
+.message-text { font-size: 0.448rem; line-height: 0.864rem; padding-bottom: 0.576rem; color: #333; }
 .user-card-item { height: 1.376rem; border-bottom: 1px solid #f2f2f2; position: relative; }
 .user-card-item a { display: block; padding-left: 0.864rem; font-size: 0.448rem; line-height: 1.376rem; color: #333333; background-size: 0.576rem 0.528rem; background-position: 0 center; background-repeat: no-repeat; }
 .user-card-item-arror { position: absolute; right: 0; top: 0.432rem; width: 0.416rem; height: 0.528rem; display: block; background-image: url(../icon/user-item-arror.png); background-repeat: no-repeat; background-size: 0.416rem 0.528rem; }
 .user-card-feed-item a { background-size: 0.576rem 0.592rem; background-position: 0 0.352rem; }
 
+.user-info-input { border-bottom: 1px solid #e9e9e9; }
+.user-info-input:last-child { border: 0; }
 .user-info-input span { width: 2.656rem; height: 1.376rem; display: block; float: left; line-height: 1.376rem; text-align: left; color: #999999; font-size: 0.448rem; }
 .user-info-input input { width: 76%; height: 1.34rem; display: block; font-size: 0.448rem; line-height: 1.34rem; color: #999; border: 0; outline: 0; float: right; }
 
@@ -161,6 +171,7 @@ body { overflow-x: hidden; }
 .collection, .forward-price, .forward-noprice, .find-error { display: block; float: left; margin-top: 0.128rem; width: 2.72rem; height: 1.28rem; font-size: 0.384rem; line-height: 1.28rem; border-radius: 0.096rem; color: #fff; }
 .collection, .forward-price, .forward-noprice { margin-right: 0.16rem; }
 .collection { background: #41dd7c url(../icon/collection.png) 0.544rem 0.416rem no-repeat; background-size: 0.416rem 0.4rem; text-indent: 1.168rem; }
+.collection-star { display: block; width: 100%; margin: 0.128rem auto; background: #41dd7c url(../icon/collection-star.png) 4.736rem 0.288rem no-repeat; background-size: 0.672rem 0.64rem; text-indent: 5.76rem; height: 1.28rem; font-size: 0.448rem; line-height: 1.28rem; border-radius: 0.096rem; color: #fff; }
 .forward-price { background: #ff7100 url(../icon/forward.png) 0.096rem 0.4rem no-repeat; background-size: 0.4rem 0.416rem; text-indent: 0.544rem; }
 .forward-noprice { background: #49a6c5 url(../icon/forward.png) 0.096rem 0.4rem no-repeat; background-size: 0.4rem 0.416rem; text-indent: 0.544rem; }
 .find-error { background: #13b5b1 url(../icon/find-error.png) 0.496rem 0.352rem no-repeat; background-size: 0.432rem 0.528rem; text-indent: 1.168rem; }
@@ -194,5 +205,67 @@ body { overflow-x: hidden; }
 .shop-name, .contact-tel, .boss-name, .shop-add, .setting-id, .pw1, .pw2 { display: block; background: #f5f5f5; width: 80%; text-indent: 0.768rem; color: #b2b2b2; font-size: 0.384rem; line-height: 1.408rem; margin: 0.48rem auto 0; height: 1.408rem; border-radius: 0.696rem; border: 0; outline: 0;  }
 .shop-name { margin: 0 auto !important; }
 .pw-error { position: absolute; top: 0.4rem; width: 100%; font-size: 0.384rem; margin: 0 auto; text-align: center; color: #f00; }
+.choose-card { padding-top: 0.976rem; }
+.choose-box { padding-left: 0; padding-right: 0; width: 70%; margin: 0 auto; }
+.choose-title { color: #333; text-align: center; font-size: 0.512rem; line-height: 0.512rem; }
+.choose-little-title { color: #999; text-align: center; font-size: 0.416rem; line-height: 0.416rem; margin-top: 0.256rem; }
+
+.choose-btn { width: 45%; margin-bottom: 1.296rem; opacity: 1; padding-top: 1.44rem; text-align: center; font-size: 0.416rem; line-height: 0.416rem; color: #fff; padding-bottom: 0.272rem; background-color: #ccc; margin-top: 1.488rem; border-radius: 0.192rem; }
+.choose-btn-left { float: left; background-image: url(../icon/choose-business.png); background-position: center 0.256rem; background-size: 1.072rem 1.04rem; background-repeat: no-repeat; }
+.choose-btn-right{ float: right; background-image: url(../icon/choose-shop.png); background-position: center 0.304rem; background-size: 0.896rem 0.8rem; background-repeat: no-repeat; }
+.choose-btn-on { background-color: #41dd7c; opacity: 1; box-shadow: 0 0 10px #41dd7c; }
+
+
+.lin1, .lin2 { padding-bottom: 0.528rem; }
+.add-local, .add-name, .add-tel { font-size: 0.448rem!important; height: 0.992rem!important; line-height: 0.992rem!important; width: 1.488rem!important; color: #999!important; text-align: center!important; }
+.add-input-local, .add-input-name, .add-input-tel { border: 1px solid #d2d2d2!important; float: left!important; height: 0.992rem!important; padding: 0 0.195rem; }
+.user-info-add, .user-info-del { float: right; height: 0.992rem; line-height: 0.992rem; color: #41dd7c; margin-right: 0.195rem; }
+.user-info-add { display: block; }
+.user-info-del { display: none; }
+.add-input-local { width: 65%!important; }
+.add-input-name { width: 32%!important; }
+.add-input-tel { width: 40%!important; }
+
+
+
+.message-date, .message-time { font-size:  }
+
+
+
+
+.title-card { text-align: center; font-size: 0.544rem; line-height: 0.544rem; color: #333; padding: 0.48rem 0; }
+.contact-little-title { width: 100%; padding-top: 0.48rem; font-size: 0.48rem; line-height: 0.48rem; color: #333; padding-left: 0.448rem; background-image: url(../icon/title-bg.png); background-repeat: no-repeat; background-position: 0.16rem 0.5rem; background-size: 0.096rem 0.416rem; }
+.contact-page-add { margin-top: 0.48rem; padding-left: 1.056rem; padding-right: 0.8rem; background: url(../icon/contact-add.png) 0.464rem 0.066rem no-repeat; background-size: 0.352rem 0.48rem; color: #666; font-size: 0.48rem; }
+.contact-page-tel { display: block; margin-top: 0.48rem; padding-left: 1.056rem; padding-bottom: 0.48rem; padding-right: 0.8rem; background: url(../icon/contact-tel.png) 0.464rem 0.066rem no-repeat; background-size: 0.352rem 0.48rem; color: #666; font-size: 0.48rem; }
+.contact-text { margin-top: 0.48rem; padding-left: 0.144rem; padding-right: 0.368rem; padding-bottom: 0.48rem; font-size: 0.448rem; line-height: 0.896rem; color: #666; }
+
+
+
+.logo-bar { height: 2.912rem; background: #fff; padding-left: 2.944rem; padding-top: 0.624rem; background-size: 1.92rem; background-repeat: no-repeat; background-position: 0.56rem 0.416rem; }
+.business-name { font-size: 0.544rem; line-height: 0.544rem; color: #333; padding-bottom: 0.528rem; }
+.business-detail-tel { padding-left: 0.816rem; font-size: 0.448rem; color: #666; background: url(../icon/contact-tel.png) 0 0 no-repeat; background-size: 0.432rem 0.496rem; }
+
+
+.ad-swiper { width: 100%; height: 11.2rem; margin-bottom: 0.32rem; }
+.ad-slide { width: 100%; height: 11.2rem; }
+.ad-slide a { display: block; width: 100%; height: 11.2rem; background-position: center; background-repeat: no-repeat; background-size: auto 11.2rem; }
+
+.only-travle { width: 11.52rem; padding-bottom: 0.48rem; }
+.only-travle li { width: 2.72rem; height: 2.32rem; margin-right: 0.16rem; margin-bottom: 0.16rem; float: left; }
+.only-travle a { display: block; padding-top: 1.744rem; background-size: auto 1.744rem; background-position: 0 0; background-repeat: no-repeat; font-size: 0.448rem; color: #333; }
+
+
+.contact-being-list { height: 1.52rem; border-bottom: 1px solid #f2f2f2; }
+.contact-being-list:last-child { border-bottom: 0; }
+.being-name { float: left; font-size: 0.576rem; line-height: 1.52rem; color: #41dd7c; }
+.being-local { float: left; font-size: 0.448rem; line-height: 1.52rem; color: #666; margin-left: 0.32rem; }
+.being-tel { float: right; font-size: 0.448rem; line-height: 1.52rem; color: #666; margin-right: 1.12rem; }
+.being-tel-number { color: #ff7100; text-decoration: underline; }
+
+
+
+textarea { width: 100%; height: 2.88rem; border: 0; outline: 0; -webkit-appearance: none; }
+#info { position: absolute; top: 2.336rem; right: 0.384rem; }
+
 
 /*结束*/

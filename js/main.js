@@ -5,6 +5,13 @@ var indexswiper = new Swiper('.index-swiper',{
 	autoplay: 3000
 });
 
+// 供应商页轮播图
+var  adswiper = new Swiper('.ad-swiper',{
+	pagination: '.ad-pagination',
+	loop: true,
+	autoplay: 3000
+});
+
 // 详情页轮播图
 var  detailswiper = new Swiper('.detail-swiper',{
 	pagination: '.detail-pagination',
@@ -61,7 +68,7 @@ $(window).scroll(function() {
 	var jtxcTop = $('#jtxc-card').offset().top-$("body").scrollTop();
 	var fysmTop = $('#fysm-card').offset().top-$("body").scrollTop();
 	var zysxTop = $('#zysx-card').offset().top-$("body").scrollTop();
-	console.log(zysxTop);
+
 	if (show<=0) {
 		$('.detail-tab2').css({
 			'display': 'block'
@@ -158,15 +165,42 @@ $('.cancel').click(function(){
 	$('.delete-item').css('display', 'none');
 });
 
+$(document).ready(function(){
+	$('.choose-btn-left').addClass('choose-btn-on');
+});
+$('.choose-btn').click(function(){
+	$(this).prevAll('.choose-btn-on').removeClass('choose-btn-on');
+	$(this).nextAll('.choose-btn-on').removeClass('choose-btn-on');
+	$(this).addClass('choose-btn-on');
+})
 
 
+$('.user-info-add').live('click', function(){
+	$(this).parent().parent().clone().appendTo($('.user-card-list-add'));
+	// 如果想让添加按钮在最下面 就将.not(':first') 替换成 .not(':last')  反之亦然
+	$('ul.user-card-list-add li.user-info-input').not(':last').find('.user-info-add').css('display', 'none');
+	$('ul.user-card-list-add li.user-info-input').not(':last').find('.user-info-del').css('display', 'block');
+	$('ul.user-card-list-add li.user-info-input').last().find('input').attr('value', '');
+
+});
+
+$('.user-info-del').live('click', function() {
+	$(this).parents('.user-info-input').remove();
+});
 
 
-
-
-
-
-
+$(function(){
+  $('#textarea').limitTextarea({
+    maxNumber:400,     //最大字数
+    position:'bottom', //提示文字的位置，top：文本框上方，bottom：文本框下方
+    onOk:function(){
+      $('#textarea').css('background-color','white');    
+    },                 //输入后，字数未超出时调用的函数
+    onOver:function(){
+      $('#textarea').css('background-color','lightpink');    
+    }                  //输入后，字数超出时调用的函数，这里把文本区域的背景变为粉红色   
+  });    
+});
 
 
 
